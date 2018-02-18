@@ -3,6 +3,7 @@ package lucassales2.com.github.opendotaapp.inject
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
+import lucassales2.com.github.core.NetworkModule
 import lucassales2.com.github.data.DatabaseModule
 import lucassales2.com.github.opendotaapp.OpenDotaApplication
 import lucassales2.com.github.opendotaapp.home.HomeBuilder

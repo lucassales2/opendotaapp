@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Debug
 import dagger.Module
 import dagger.Provides
+import lucassales2.com.github.data.dao.MatchDao
 import javax.inject.Singleton
 
 @Module
@@ -23,4 +24,8 @@ class DatabaseModule {
     @Singleton
     @Provides
     fun provideDatabaseTransactionRunner(db: OpenDotaDatabase): DatabaseTxRunner = DatabaseTxRunner(db)
+
+    @Provides
+    fun provideMatchDao(openDotaDatabase: OpenDotaDatabase): MatchDao =
+            openDotaDatabase.matchDao()
 }
